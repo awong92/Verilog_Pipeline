@@ -89,6 +89,35 @@ begin
     /////////////////////////////////////////////
     // TODO: Complete here
     /////////////////////////////////////////////
+	 /*
+	 if (I_BranchAddrSelect==1'b1)
+	 begin
+		PC <= I_BranchPC;
+		PC <= PC + 16'h4;
+			
+		// Get IR and Increment PC
+		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
+		O_PC <= PC + 16'h4;
+		O_FetchStall <= 1'b0;
+	 end
+	 else 
+	 */
+	 if (I_BranchStallSignal==1'b1) O_FetchStall <= 1'b1;
+	 else if (I_DepStallSignal==1'b1) O_FetchStall <= 1'b1;
+	 else
+	 begin
+		
+		if (I_BranchAddrSelect==1'b1) PC <= I_BranchPC;
+		else PC <= PC + 16'h4;
+			
+		// Get IR and Increment PC
+		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
+		O_PC <= PC + 16'h4;
+		O_FetchStall <= 1'b0;
+	 end
+	 
+	 	 
+	 /*
 	 if (I_BranchStallSignal==1'b1) O_FetchStall <= 1'b1;
 	 else
 	 begin
@@ -101,7 +130,8 @@ begin
 			O_FetchStall <= 1'b0;
 			
 	end
-	 
+	*/
+	
  end // end else
 
 end // always @(negedge I_CLOCK)

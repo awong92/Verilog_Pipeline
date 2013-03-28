@@ -283,12 +283,17 @@ begin
     /////////////////////////////////////////////
     // TODO: Complete here 
     /////////////////////////////////////////////
-	if (I_FetchStall == 1'b0 && O_DepStallSignal == 1'b0)
+	 
+	 
+	if (I_FetchStall == 1'b0 && __DepStallSignal == 1'b0) 
 	begin
 		O_PC <= I_PC;
 		O_Opcode <= I_IR[31:24];
 		O_Src1Value <= RF[I_IR[19:16]];
 		O_Src2Value <= RF[I_IR[11:8]];
+				
+		// update valid bits
+		if (I_WriteBackEnable==1'b1) RF_VALID[I_WriteBackRegIdx] <= 1'b1;
 		
 		case(I_IR[31:24]) // top 8 bits 
 	 	`OP_ADD_D, `OP_AND_D:
@@ -328,7 +333,7 @@ begin
 		`OP_JMP, `OP_JSRR: O_DestValue <= RF[I_IR[19:16]];
 		`OP_BRN, `OP_BRZ, `OP_BRP, `OP_BRNZ, `OP_BRZP, `OP_BRNP, `OP_BRNZP: 
 			O_Imm <= ((ConditionalCode & I_IR[26:24])? I_IR[15:0]: 16'h0000);
-	endcase
+		endcase
 		
 	end // if (I_FetchStall == 1'b0 && O_DepStall == 1'b0)
 
