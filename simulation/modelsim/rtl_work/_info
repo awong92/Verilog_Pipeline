@@ -1,0 +1,192 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Chris\Dropbox\CS 3220\Assignment 5\homework5_v3\simulation\modelsim
+vDecode
+IkUEKNSaiBB_GPmA1gTmCU0
+VU2hbXDd75DRz=Tm56?>[F2
+Z1 dC:\Users\Chris\Dropbox\CS 3220\Assignment 5\homework5_v3\simulation\modelsim
+w1364428405
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v
+L0 3
+Z2 OV;L;10.1b;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3} -O0
+n@decode
+!i10b 1
+!s100 6;l?WK64[AdP@FQm8R=gB2
+!s85 0
+!s108 1364428460.222000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v|
+!s101 -O0
+vExecute
+I;8dWI?h7fMUCik[5^7`B20
+V>4bVRjJN:zKkDAzEzbWk62
+R1
+w1364419162
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@execute
+!i10b 1
+!s100 Dh4dUi3VelU9bb5oIoUz81
+!s85 0
+!s108 1364428459.812000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v|
+!s101 -O0
+vFetch
+I0iG:TXZc>cfj69IVL1b1S1
+VjL8k?<4jZBi6:U1zF0H=Y0
+R1
+w1364418696
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@fetch
+!i10b 1
+!s100 8Y<Kd9Y6f9Ek9^T7QRRKC1
+!s85 0
+!s108 1364428460.959000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v|
+!s101 -O0
+vlg_highlevel
+!i10b 1
+!s100 Lk4<OMH^hjT<iCZ0RUM^E0
+I@Ic1@_a=E?bzR9CdHl:C61
+V=Si@d[me>mWTE;:Pa>@H81
+R1
+w1364426508
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v
+L0 221
+R2
+r1
+!s85 0
+31
+!s108 1364428461.779000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v|
+!s101 -O0
+R3
+R4
+vMemory
+IlmiDc5cio2PWP:caXUbna0
+V6eYj=22nOCOiL=WE`Ei?n3
+R1
+w1364420067
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@memory
+!i10b 1
+!s100 hW;V4:zdJ1_j]Kg7=8cT<1
+!s85 0
+!s108 1364428458.474000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v|
+!s101 -O0
+vpll
+IkDKV@:HMnVOISMd;cTT5b0
+V_XSVm9JT6dEoXJ=[=cVXa3
+R1
+w1364412826
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Q:JG03XJNa:nIPCMHFSM21
+!s85 0
+!s108 1364428458.113000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v|
+!s101 -O0
+vSevenSeg
+I6;B[XgIkmleE8WY<43_9@0
+VE>VAWodAcA0XbzQM`Nba60
+R1
+w1329523234
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v
+L0 1
+R2
+r1
+31
+R3
+n@seven@seg
+R4
+!i10b 1
+!s100 oWU]1fikBj@a80?`2k1CO3
+!s85 0
+!s108 1364428457.290000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v|
+!s101 -O0
+vSignExtension
+IA=HiT>G;f?BJ<imkbE6KB1
+Vl2bD2B8b=WZP:Ln<Y3WeY3
+R1
+w1362159564
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@sign@extension
+!i10b 1
+!s100 MdE^CA1`nGA[;jh90hfG`1
+!s85 0
+!s108 1364428457.908000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v|
+!s101 -O0
+vWriteback
+IA5dV?EMgPG77@R_CGB]R93
+V@h0YcE[Q`<C;W6oGME9JG3
+R1
+w1363823582
+8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v
+FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@writeback
+!i10b 1
+!s100 aoD>1V2[o?=^>Z<^a8abG0
+!s85 0
+!s108 1364428458.335000
+!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v|
+!s101 -O0

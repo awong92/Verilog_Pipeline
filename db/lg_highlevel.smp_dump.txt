@@ -1,0 +1,7 @@
+
+State Machine - |lg_highlevel|Decode:Decode0|ConditionalCode
+Name ConditionalCode.000 ConditionalCode.100 ConditionalCode.010 ConditionalCode.001 
+ConditionalCode.000 0 0 0 0 
+ConditionalCode.001 1 0 0 1 
+ConditionalCode.010 1 0 1 0 
+ConditionalCode.100 1 1 0 0 

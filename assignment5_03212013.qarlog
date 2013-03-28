@@ -1,0 +1,31 @@
+Quartus II Archive log --	C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/assignment5_03212013.qarlog
+
+Archive:	C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/assignment5_03212013.qar
+Date:		Fri Mar 22 19:24:03 2013
+Quartus II 32-bit		12.1 Build 177 11/07/2012 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/assignment_defaults.qdf
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/data.hex
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/grading_asm.hex
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/incremental_db/compiled_partitions/lg_highlevel.db_info
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.qpf
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.qsf
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.ppf
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.qip
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll_bb.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/simulation/modelsim/my_custom_view.do
+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
