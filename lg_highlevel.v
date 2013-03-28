@@ -1,4 +1,4 @@
-
+/*
 `include "global_def.h"
 
 `timescale 1ns / 1ps
@@ -209,11 +209,11 @@ Writeback Writeback0(
 );
 
 endmodule // module lg_highlevel
-
+*/
 
 
 // modelsim clock
-/*
+
 `include "global_def.h"
 
 `timescale 1ns / 1ps
@@ -242,7 +242,7 @@ output [6:0] HEX0, HEX1, HEX2, HEX3;
 reg test_clock;
 initial begin
   test_clock = 1;
-  #10000 $finish;
+  #1000000 $finish;
 end
 
 always begin 
@@ -272,7 +272,7 @@ always @(posedge pll_c0) begin
     clk <= 0;
   end else begin 
     counter <= counter + 1;
-    if (counter == 32'd00100000) begin // 32'd10000000) begin
+    if (counter == 32'd00001000) begin // 32'd10000000) begin
       counter <= 0;
       clk <= ~clk;
     end
@@ -290,7 +290,8 @@ wire BranchStallSignal_FD;
 wire FetchStall_FD;
 
 Fetch Fetch0(
-  .I_CLOCK(test_clock), 
+  // .I_CLOCK(pll_c0), 
+  .I_CLOCK(test_clock),
   .I_LOCK(pll_locked),
   .I_BranchPC(BranchPC_FM),
   .I_BranchAddrSelect(BranchAddrSelect_FM),
@@ -318,6 +319,7 @@ wire FetchStall_DE;
 wire DepStall_DE;
 
 Decode Decode0(
+  // .I_CLOCK(pll_c0),
   .I_CLOCK(test_clock), 
   .I_LOCK(LOCK_FD),
   .I_FetchStall(FetchStall_FD),
@@ -349,6 +351,7 @@ wire FetchStall_EM;
 wire DepStall_EM;
 
 Execute Execute0(
+  // .I_CLOCK(pll_c0),
   .I_CLOCK(test_clock),
   .I_LOCK(LOCK_DE),
   .I_FetchStall(FetchStall_DE),
@@ -378,7 +381,8 @@ wire FetchStall_MW;
 wire DepStall_MW;
 
 Memory Memory0(
-  .I_CLOCK(test_clock), 
+  // .I_CLOCK(pll_c0), 
+  .I_CLOCK(test_clock),
   .I_LOCK(LOCK_EM),
   .I_FetchStall(FetchStall_EM),
   .I_ALUOut(ALUOut_EM),
@@ -404,7 +408,8 @@ Memory Memory0(
 );
 
 Writeback Writeback0(
-  .I_CLOCK(test_clock), 
+  // .I_CLOCK(pll_c0), 
+  .I_CLOCK(test_clock),
   .I_LOCK(LOCK_MW),
   .I_FetchStall(FetchStall_MW),
   .I_ALUOut(ALUOut_MW),
@@ -418,4 +423,3 @@ Writeback Writeback0(
 );
 
 endmodule // module lg_highlevel
-*/

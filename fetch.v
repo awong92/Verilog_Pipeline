@@ -82,7 +82,6 @@ begin
     PC <= 0;
     O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
     O_PC <= 16'h4;
-	 // O_LOCK <= 1'b1;
 	 O_FetchStall <= 1'b0;
   end 
   else
@@ -90,87 +89,20 @@ begin
     /////////////////////////////////////////////
     // TODO: Complete here
     /////////////////////////////////////////////
-	 
-	 // stall if branch stall or dep stall asserted
-	 
-	 // I_BranchAddrSelect == 1 interpreted as 
-
-	 /*
-	 if (I_BranchStallSignal==1'b1 && I_BranchAddrSelect==1'b0) 
+	 if (I_BranchStallSignal==1'b1) O_FetchStall <= 1'b1;
+	 else
 	 begin
-		O_FetchStall <= 1'b1;
-	 end
-	 else if (I_DepStallSignal==1'b1) 
-	 begin
-		O_FetchStall <= 1'b1;
-	 end
-	 else // when neither signals is set 
-	 begin
-		
-		if (I_BranchAddrSelect==1'b1) PC <= I_BranchPC;
-		else PC <= PC +  16'h4;
-		O_FetchStall <= 1'b0;
-		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
-		O_PC <= PC + 16'h4;
-		
-	 end
-	 */
-	 /*
-	 if (I_BranchAddrSelect==1'b1) 
-	 begin
-
-		O_FetchStall <= 1'b0;
-		PC <= I_BranchPC;
-		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
-		O_PC <= PC + 16'h4;
-
-	 end
-	 else if ( (I_BranchStallSignal==1'b1) || (I_DepStallSignal==1'b1) ) 
-	 begin
-		O_FetchStall <= 1'b1;
-	 end
-	 else // when neither signals is set 
-	 begin
-		PC <= PC +  16'h4;
-		O_FetchStall <= 1'b0;
-		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
-		O_PC <= PC + 16'h4;
-		
-	 end
-	 */
-	 
-	 // in case of branch instructions, I_DepStallSignal indicates that 
-	 if (I_BranchAddrSelect==1'b1) // ((I_BranchStallSignal==1'b1) && (I_BranchAddrSelect==1'b1))
-		begin
-			PC <= I_BranchPC;
-			O_FetchStall <= 1'b0;
+			if (I_BranchAddrSelect==1'b1) PC <= I_BranchPC;
+			else PC <= PC + 16'h4;
+			
+			// Get IR and Increment PC
 			O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
 			O_PC <= PC + 16'h4;
-		end
-	 else if ((I_DepStallSignal==1'b1) || (I_BranchStallSignal==1'b1)) O_FetchStall <= 1'b1;
-	 else
-	 begin	 
-		PC <= PC +  16'h4;
-		O_FetchStall <= 1'b0;
-		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
-		O_PC <= PC + 16'h4;
-	 end
-		
+			O_FetchStall <= 1'b0;
+			
+	end
 	 
-	 end // end else
-	 /*
-	 else if (I_DepStallSignal==1'b0)
-	 begin
-		O_FetchStall <= 1'b0;
-		if (I_BranchAddrSelect==1'b1) PC <= I_BranchPC;
-		else PC <= PC +  16'h4;
-		O_IR <= InstMem[PC[`PC_WIDTH-1:2]];
-		O_PC <= PC + 16'h4;
-	 end
-	 else O_FetchStall <= 1'b1;
-	 */
-	 
-	// end // if I_LOCK == 1
+ end // end else
 
 end // always @(negedge I_CLOCK)
 

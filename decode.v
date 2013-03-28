@@ -117,8 +117,8 @@ wire __DepStallSignal;
      ////////////////////////////////////////////
 assign __DepStallSignal = 
 	(I_LOCK == 1'b1) ? ( 
-		(I_FetchStall==1'b1) ? 1'b1 :
-		(I_IR[31:24] == `OP_ADDI_D || I_IR[31:24] == `OP_ANDI_D) ? (
+		// (I_FetchStall==1'b1) ? 1'b1 :
+		(I_IR[31:24] == `OP_ADDI_D) ? (
 			(I_WriteBackEnable == 1) ? (
 				(I_WriteBackRegIdx == I_IR[19:16]) ? 
 					(1'b0) : 
@@ -126,14 +126,44 @@ assign __DepStallSignal =
 			) : 
 			(RF_VALID[I_IR[19:16]] != 1)
 		) : 
-		(I_IR[31:24] == `OP_ADD_D || I_IR[31:24] == `OP_AND_D) ? (
+		(I_IR[31:24] == `OP_ANDI_D) ? (
 			(I_WriteBackEnable == 1) ? (
-				(I_WriteBackRegIdx == I_IR[19:16] || I_WriteBackRegIdx == I_IR[11:8]) ? 
-					(RF_VALID[I_IR[19:16]] != 1 || RF_VALID[I_IR[11:8]]!=1) : 
-				(RF_VALID[I_IR[19:16]] != 1 || RF_VALID[I_IR[11:8]] != 1)
+				(I_WriteBackRegIdx == I_IR[19:16]) ? 
+					(1'b0) : 
+				(RF_VALID[I_IR[19:16]] != 1)
 			) : 
-			(RF_VALID[I_IR[19:16]] != 1 || RF_VALID[I_IR[11:8]] != 1)
+			(RF_VALID[I_IR[19:16]] != 1)
 		) : 
+		(I_IR[31:24] == `OP_ADD_D) ? (
+			(I_WriteBackEnable == 1) ? (
+				(I_WriteBackRegIdx == I_IR[19:16]) ? (
+					(RF_VALID[I_IR[19:16]] != 1) ? (1'b1) :
+					(RF_VALID[I_IR[11:8]] != 1) 
+				):
+				((I_WriteBackRegIdx == I_IR[11:8]) ? (1'b1) :
+					(RF_VALID[I_IR[11:8]]!=1) ? (1'b1) : 
+				(RF_VALID[I_IR[19:16]] != 1))
+				
+			) : 
+			((RF_VALID[I_IR[19:16]] != 1) ?
+				(1'b0):
+			(RF_VALID[I_IR[11:8]] != 1) )
+		) : 
+		(I_IR[31:24] == `OP_AND_D) ? (
+			(I_WriteBackEnable == 1) ? (
+				(I_WriteBackRegIdx == I_IR[19:16]) ? (
+					(RF_VALID[I_IR[19:16]] != 1) ? (1'b1) :
+					(RF_VALID[I_IR[11:8]] != 1) 
+				):
+				((I_WriteBackRegIdx == I_IR[11:8]) ? (1'b1) :
+					(RF_VALID[I_IR[11:8]]!=1) ? (1'b1) : 
+				(RF_VALID[I_IR[19:16]] != 1))
+				
+			) : 
+			((RF_VALID[I_IR[19:16]] != 1) ?
+				(1'b0):
+			(RF_VALID[I_IR[11:8]] != 1) )
+		) :  
 		(I_IR[31:24] == `OP_MOVI_D) ? // check
 			(1'b0) : 
 		(I_IR[31:24] == `OP_JSR) ? // JSR 
@@ -154,50 +184,29 @@ assign __DepStallSignal =
 					) : 
 					(RF_VALID[I_IR[23:20]] != 1)
 				) :
-		(I_IR[31:24] == `OP_STW) ? ( // need to read from src and base
-					(I_WriteBackEnable == 1) ? (
-						(I_WriteBackRegIdx == I_IR[23:20] || I_WriteBackRegIdx == I_IR[19:16]) ? 
-							(RF_VALID[I_IR[23:20]] != 1 || RF_VALID[I_IR[19:16]]!=1) : 
-						(RF_VALID[I_IR[23:20]] != 1 || RF_VALID[I_IR[19:16]]!=1)
-					) : 
-					(RF_VALID[I_IR[23:20]] != 1 || RF_VALID[I_IR[19:16]]!=1)
-				) :
-		(I_IR[31:24] == `OP_JMP || I_IR[31:24] == `OP_JSRR) ? (
+		(I_IR[31:24] == `OP_STW) ? (
+			(I_WriteBackEnable == 1) ? (
+				(I_WriteBackRegIdx == I_IR[23:20]) ? (
+					(RF_VALID[I_IR[23:20]] != 1) ? (1'b1) :
+					(RF_VALID[I_IR[19:16]] != 1) 
+				):
+				((I_WriteBackRegIdx == I_IR[19:16]) ? (1'b1) :
+					(RF_VALID[I_IR[19:16]]!=1) ? (1'b1) : 
+				(RF_VALID[I_IR[23:20]] != 1))
+				
+			) : 
+			((RF_VALID[I_IR[23:20]] != 1) ?
+				(1'b0):
+			(RF_VALID[I_IR[19:16]] != 1) )
+		) : 
+		(I_IR[31:24] == `OP_JMP) ? (
 					(I_WriteBackEnable == 1) ? (
 						(I_WriteBackRegIdx == I_IR[19:16]) ? 
 							(1'b0) : 
 						(RF_VALID[I_IR[19:16]] != 1)
 					) : 
 					(RF_VALID[I_IR[19:16]] != 1)
-				) :
-					// CC set by the previous instruction
-					// if NZP matches CC, STALL since the branch will be taken
-					// 
-					(I_IR[31:24] == `OP_BRN) ? 
-						(ConditionalCode == 3'b001) : // ConditionalCode: PZN
-					(I_IR[31:24] == `OP_BRZ) ? 
-						(ConditionalCode == 3'b010) :
-					(I_IR[31:24] == `OP_BRP) ? 
-						(ConditionalCode == 3'b100) :
-					(I_IR[31:24] == `OP_BRNZ) ? (
-						(ConditionalCode == 3'b001) ? 1'b1 :
-						(ConditionalCode == 3'b010)
-					) : 
-						// (ConditionalCode == 3'b001 || ConditionalCode == 3'b010) :
-					(I_IR[31:24] == `OP_BRZP) ? (
-						(ConditionalCode == 3'b100) ? 1'b1 :
-						(ConditionalCode == 3'b010)
-					) :
-						// (ConditionalCode == 3'b100 || ConditionalCode == 3'b010) :
-					(I_IR[31:24] == `OP_BRNP) ? (
-						(ConditionalCode == 3'b001) ? 1'b1 :
-						(ConditionalCode == 3'b100)
-					) :
-					(I_IR[31:24] == `OP_BRNZP) ? (
-						(ConditionalCode == 3'b001) ? 1'b1 :
-						(ConditionalCode == 3'b010) ? 1'b1 :
-						(ConditionalCode == 3'b100)
-					) :
+				) :			
 					(1'b0)
 				) : 
 	
@@ -241,31 +250,19 @@ begin
     /////////////////////////////////////////////
     // TODO: Complete here 
     /////////////////////////////////////////////
-	 // if (I_FetchStall == 1'b1) O_FetchStall <= 1'b1;
-	 //else 
-	if (I_FetchStall != 1'b1)
+	if (I_WriteBackEnable==1'b1)
 	begin
-		// O_FetchStall <= 1'b0;
-		// write data back
-		if (I_WriteBackEnable==1'b1)
-		// if ( (I_FetchStall == 1'b0) || (I_WriteBackEnable == 1'b1) )
+		RF[I_WriteBackRegIdx] <= I_WriteBackData;
+
+		if (I_WriteBackData[`REG_WIDTH-1]==1'b0) 
 		begin
-			RF[I_WriteBackRegIdx] <= I_WriteBackData;
-			
-			// RF_VALID[I_IR[I_WriteBackRegIdx]] <= 1'b1;
-			
-			// change the conditional code: PZN
-					
-			if (I_WriteBackData[`REG_WIDTH-1]==1'b0) 
-			begin
-				if (I_WriteBackData==16'h0000) ConditionalCode <= 3'b010; // CC = 0
-				else ConditionalCode <= 3'b100; // CC = P
-			end
-			else ConditionalCode <= 3'b001; // CC = N
-			// else if (I_WriteBackData[`REG_WIDTH-1]==1'b1) ConditionalCode <= 3'b001;
-			// else ConditionalCode <= 3'b010;
+			if (I_WriteBackData==16'h0000) ConditionalCode <= 3'b010; // CC = 0
+			else ConditionalCode <= 3'b001; // CC = P
 		end
+		else ConditionalCode <= 3'b100; // CC = N
 	end
+	
+	O_DepStall <= __DepStallSignal;
 	 
   end // if (I_LOCK == 1'b1)
 end // always @(posedge I_CLOCK)
@@ -279,58 +276,27 @@ end // always @(posedge I_CLOCK)
 always @(negedge I_CLOCK)
 begin
   O_LOCK <= I_LOCK;
-  
+  O_FetchStall <= I_FetchStall;
 
   if (I_LOCK == 1'b1)
   begin
     /////////////////////////////////////////////
     // TODO: Complete here 
     /////////////////////////////////////////////
-	O_FetchStall <= I_FetchStall;
-	O_PC <= I_PC;
-	
-  if (I_FetchStall == 1'b1) O_DepStall <= I_FetchStall; // send NOP and do NOT decode
-  else
-  begin
-	
-	// set O_DepStall to 0
-	O_DepStall <= 1'b0;
-	
-	// decode
-	O_Opcode <= I_IR[31:24];
-	// if (I_WriteBackRegIdx==I_IR[19:16]) O_Src1Value <= I_WriteBackData;
-	// else O_Src1Value <= RF[I_IR[19:16]];
-	// if (I_WriteBackRegIdx==I_IR[11:8]) O_Src2Value <= I_WriteBackData;
-	// else O_Src2Value <= RF[I_IR[11:8]];
-	O_Src1Value <= RF[I_IR[19:16]];
-	O_Src2Value <= RF[I_IR[11:8]];
-	// O_Imm <= I_IR[15:0];
-	// O_PC <= I_PC;
-	// O_DestValue <= RF[I_IR[19:16]];
-	// O_FetchStall <= 1'b0;
-	
-	// if writeback is enabled, then set the valid bit back to 1
-	if (I_WriteBackEnable == 1'b1) RF_VALID[I_WriteBackRegIdx] <= 1'b1;
-	
-	// the register we are writing to should be invalid until it is written back
-	 case(I_IR[31:24]) // top 8 bits 
-	 	`OP_ADD_D: 
+	if (I_FetchStall == 1'b0 && O_DepStallSignal == 1'b0)
+	begin
+		O_PC <= I_PC;
+		O_Opcode <= I_IR[31:24];
+		O_Src1Value <= RF[I_IR[19:16]];
+		O_Src2Value <= RF[I_IR[11:8]];
+		
+		case(I_IR[31:24]) // top 8 bits 
+	 	`OP_ADD_D, `OP_AND_D:
 		begin
 			O_DestRegIdx <= I_IR[23:20];
 			RF_VALID[I_IR[23:20]] <= 1'b0;
 		end
-		`OP_AND_D:
-		begin
-			O_DestRegIdx <= I_IR[23:20];
-			RF_VALID[I_IR[23:20]] <= 1'b0;
-		end
-		`OP_ADDI_D:
-		begin
-			O_DestRegIdx <= I_IR[23:20];
-			O_Imm <= I_IR[15:0];
-			RF_VALID[I_IR[23:20]] <= 1'b0;
-		end
-		`OP_ANDI_D:
+		`OP_ADDI_D, `OP_ANDI_D:
 		begin
 			O_DestRegIdx <= I_IR[23:20];
 			O_Imm <= I_IR[15:0];
@@ -355,34 +321,16 @@ begin
 		end
 		`OP_STW:  
 		begin 
-			// if (I_WriteBackRegIdx==I_IR[23:20]) O_DestValue <= I_WriteBackData;
-			// else O_DestValue <= RF[I_IR[23:20]]; // RF[I_IR[19:16]] + I_IR[15:0]; // address in the DataMem
 			O_DestValue <= RF[I_IR[23:20]];
 			O_Imm <= I_IR[15:0];
 		end
 		`OP_JSR:  O_Imm <= I_IR[15:0];
-		`OP_JMP:  
-		begin
-			// if (I_WriteBackRegIdx==I_IR[19:16]) O_DestValue <= I_WriteBackData;
-			// else O_DestValue <= RF[I_IR[19:16]];
-			O_DestValue <= RF[I_IR[19:16]];
-		end
-		`OP_JSRR: 
-		begin
-			// if (I_WriteBackRegIdx==I_IR[19:16]) O_DestValue <= I_WriteBackData;
-			// else O_DestValue <= RF[I_IR[19:16]];
-			O_DestValue <= RF[I_IR[19:16]];
-		end
-		// ConditionalCode: PZN
-		`OP_BRN:   O_Imm <= ConditionalCode==3'b001 ? I_IR[15:0] : 1;
-		`OP_BRZ:   O_Imm <= ConditionalCode==3'b010 ? I_IR[15:0] : 1;
-		`OP_BRP:   O_Imm <= ConditionalCode==3'b100 ? I_IR[15:0] : 1;
-		`OP_BRNZ:  O_Imm <= (ConditionalCode==3'b001 || ConditionalCode==3'b010) ? I_IR[15:0] : 1;
-		`OP_BRZP:  O_Imm <= (ConditionalCode==3'b100 || ConditionalCode==3'b010) ? I_IR[15:0] : 1;
-		`OP_BRNP:  O_Imm <= (ConditionalCode==3'b100 || ConditionalCode==3'b001) ? I_IR[15:0] : 1;
-		`OP_BRNZP: O_Imm <= (ConditionalCode==3'b001 || ConditionalCode==3'b010 || ConditionalCode==3'b100) ? I_IR[15:0] : 1;
+		`OP_JMP, `OP_JSRR: O_DestValue <= RF[I_IR[19:16]];
+		`OP_BRN, `OP_BRZ, `OP_BRP, `OP_BRNZ, `OP_BRZP, `OP_BRNP, `OP_BRNZP: 
+			O_Imm <= ((ConditionalCode & I_IR[26:24])? I_IR[15:0]: 16'h0000);
 	endcase
-end
+		
+	end // if (I_FetchStall == 1'b0 && O_DepStall == 1'b0)
 
 end // if (I_LOCK == 1'b1)
 end // always @(negedge I_CLOCK)

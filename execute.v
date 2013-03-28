@@ -91,19 +91,11 @@ begin
 		  `OP_ANDI_D: O_ALUOut <= I_Src1Value & I_Imm;
 		  `OP_MOV:    O_ALUOut <= I_Src2Value;	
 		  `OP_MOVI_D: O_ALUOut <= I_Imm;
-		  `OP_LDW:    O_ALUOut <= I_Src1Value + I_Imm; // base + offset
-		  `OP_STW:    O_ALUOut <= I_Src1Value + I_Imm;
-        `OP_BRN:    O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRZ:    O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRP:    O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRNZ:   O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRZP:   O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRNP:   O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_BRNZP:  O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_JSR:    O_ALUOut <= I_PC + (I_Imm << 2);
-		  `OP_JMP:	  O_ALUOut <= I_DestValue;
-        `OP_JSRR:   O_ALUOut <= I_DestValue;
-	
+		  `OP_LDW: O_ALUOut <= I_Src1Value + I_Imm;
+		  `OP_STW: O_ALUOut <= I_Src1Value + I_Imm;    
+		  `OP_BRN, `OP_BRZ, `OP_BRP, `OP_BRNZ, `OP_BRZP, `OP_BRNP, `OP_BRNZP, `OP_JSR:    
+				O_ALUOut <= I_PC + (I_Imm << 2);
+		  `OP_JMP, `OP_JSRR:   O_ALUOut <= I_DestValue;	
 		endcase
 		
 	 end // end if (I_DepStall != 1'b1 && I_FetchStall != 1'b1)

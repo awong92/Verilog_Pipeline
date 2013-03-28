@@ -2,35 +2,35 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Chris\Dropbox\CS 3220\Assignment 5\homework5_v3\simulation\modelsim
+Z0 dC:\Users\Chris\Documents\GitHub\Verilog_Pipeline\simulation\modelsim
 vDecode
-IkUEKNSaiBB_GPmA1gTmCU0
+IOMoc1F]fJ?A1kKd`CACg80
 VU2hbXDd75DRz=Tm56?>[F2
-Z1 dC:\Users\Chris\Dropbox\CS 3220\Assignment 5\homework5_v3\simulation\modelsim
-w1364428405
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v
+Z1 dC:\Users\Chris\Documents\GitHub\Verilog_Pipeline\simulation\modelsim
+w1364456294
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v
 L0 3
 Z2 OV;L;10.1b;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
-Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3} -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline -O0
 n@decode
 !i10b 1
-!s100 6;l?WK64[AdP@FQm8R=gB2
+!s100 3Kgof7ON[>LXkXMW_F`JT0
 !s85 0
-!s108 1364428460.222000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v|
+!s108 1364456338.659000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v|
 !s101 -O0
 vExecute
-I;8dWI?h7fMUCik[5^7`B20
+IG3K6CXd]<KMkHUn7=ghH[2
 V>4bVRjJN:zKkDAzEzbWk62
 R1
-w1364419162
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v
+w1364453473
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/execute.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/execute.v
 L0 3
 R2
 r1
@@ -39,19 +39,19 @@ R3
 R4
 n@execute
 !i10b 1
-!s100 Dh4dUi3VelU9bb5oIoUz81
+!s100 JiFRGK[[d<N^e=S:KcL:W3
 !s85 0
-!s108 1364428459.812000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v|
+!s108 1364456338.497000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/execute.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/execute.v|
 !s101 -O0
 vFetch
-I0iG:TXZc>cfj69IVL1b1S1
+INg;NSU2E2`@a9W1MJSIZE2
 VjL8k?<4jZBi6:U1zF0H=Y0
 R1
-w1364418696
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v
+w1364450158
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/fetch.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/fetch.v
 L0 3
 R2
 r1
@@ -60,39 +60,39 @@ R3
 R4
 n@fetch
 !i10b 1
-!s100 8Y<Kd9Y6f9Ek9^T7QRRKC1
+!s100 cOd^HlYkOgkJ4d4^n0=Bj1
 !s85 0
-!s108 1364428460.959000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v|
+!s108 1364456339.856000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/fetch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/fetch.v|
 !s101 -O0
 vlg_highlevel
 !i10b 1
-!s100 Lk4<OMH^hjT<iCZ0RUM^E0
-I@Ic1@_a=E?bzR9CdHl:C61
+!s100 YcSb4VEd@<QGT`c17G@^o1
+IJCJ:[M>cF`23l]bl]h3I70
 V=Si@d[me>mWTE;:Pa>@H81
 R1
-w1364426508
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v
+w1364452430
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v
 L0 221
 R2
 r1
 !s85 0
 31
-!s108 1364428461.779000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v|
+!s108 1364456340.004000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v|
 !s101 -O0
 R3
 R4
 vMemory
-IlmiDc5cio2PWP:caXUbna0
+InDod=E72j6g[HGXo@ThL13
 V6eYj=22nOCOiL=WE`Ei?n3
 R1
-w1364420067
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v
+w1364450405
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/memory.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/memory.v
 L0 3
 R2
 r1
@@ -101,19 +101,19 @@ R3
 R4
 n@memory
 !i10b 1
-!s100 hW;V4:zdJ1_j]Kg7=8cT<1
+!s100 W0ToB02`DB1CWQ]TUbaEQ0
 !s85 0
-!s108 1364428458.474000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v|
+!s108 1364456338.264000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/memory.v|
 !s101 -O0
 vpll
-IkDKV@:HMnVOISMd;cTT5b0
+I=6b3Tk87Fo9;8:=7QU6Rn0
 V_XSVm9JT6dEoXJ=[=cVXa3
 R1
 w1364412826
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/pll.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/pll.v
 L0 39
 R2
 r1
@@ -121,19 +121,19 @@ r1
 R3
 R4
 !i10b 1
-!s100 Q:JG03XJNa:nIPCMHFSM21
+!s100 f_:n?OVzmQ`=1nl6TJUoJ1
 !s85 0
-!s108 1364428458.113000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v|
+!s108 1364456337.835000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/pll.v|
 !s101 -O0
 vSevenSeg
-I6;B[XgIkmleE8WY<43_9@0
+IeVz5>@C0FdZ?SmCbADd=D0
 VE>VAWodAcA0XbzQM`Nba60
 R1
 w1329523234
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/seven_segment.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/seven_segment.v
 L0 1
 R2
 r1
@@ -142,19 +142,19 @@ R3
 n@seven@seg
 R4
 !i10b 1
-!s100 oWU]1fikBj@a80?`2k1CO3
+!s100 9Q<HK5Pd9m?nn@SUz0Bh40
 !s85 0
-!s108 1364428457.290000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v|
+!s108 1364456337.494000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/seven_segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/seven_segment.v|
 !s101 -O0
 vSignExtension
-IA=HiT>G;f?BJ<imkbE6KB1
+I=5E;H@ljA=[d]6<g4zk240
 Vl2bD2B8b=WZP:Ln<Y3WeY3
 R1
 w1362159564
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v
 L0 1
 R2
 r1
@@ -163,19 +163,19 @@ R3
 R4
 n@sign@extension
 !i10b 1
-!s100 MdE^CA1`nGA[;jh90hfG`1
+!s100 ^EXkJY<ECVA1gN>S22BN^1
 !s85 0
-!s108 1364428457.908000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v|
+!s108 1364456337.703000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v|
 !s101 -O0
 vWriteback
-IA5dV?EMgPG77@R_CGB]R93
+IDJ60]`U][Z>2O<c^m0UlV1
 V@h0YcE[Q`<C;W6oGME9JG3
 R1
 w1363823582
-8C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v
-FC:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v
+8C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/writeback.v
+FC:/Users/Chris/Documents/GitHub/Verilog_Pipeline/writeback.v
 L0 3
 R2
 r1
@@ -184,9 +184,9 @@ R3
 R4
 n@writeback
 !i10b 1
-!s100 aoD>1V2[o?=^>Z<^a8abG0
+!s100 `J[Ik?HWo2kTM4InGX8jY3
 !s85 0
-!s108 1364428458.335000
-!s107 C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/global_def.h|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3|C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v|
+!s108 1364456338.019000
+!s107 C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/global_def.h|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/writeback.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline|C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/writeback.v|
 !s101 -O0

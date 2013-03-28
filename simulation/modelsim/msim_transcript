@@ -10,62 +10,62 @@
 # ** Warning: Copied c:\altera\12.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/seven_segment.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/seven_segment.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module SevenSeg
 # 
 # Top level modules:
 # 	SevenSeg
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module SignExtension
 # 
 # Top level modules:
 # 	SignExtension
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/pll.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/pll.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module pll
 # 
 # Top level modules:
 # 	pll
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/writeback.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/writeback.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module Writeback
 # 
 # Top level modules:
 # 	Writeback
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/memory.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/memory.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module Memory
 # 
 # Top level modules:
 # 	Memory
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/execute.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/execute.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module Execute
 # 
 # Top level modules:
 # 	Execute
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module Decode
 # 
 # Top level modules:
 # 	Decode
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module lg_highlevel
 # 
 # Top level modules:
 # 	lg_highlevel
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/fetch.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/fetch.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module Fetch
 # 
 # Top level modules:
 # 	Fetch
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Dropbox/CS\ 3220/Assignment\ 5/homework5_v3 {C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Chris/Documents/GitHub/Verilog_Pipeline {C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v}
 # Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
 # -- Compiling module lg_highlevel
 # 
@@ -91,35 +91,30 @@
 # Loading altera_mf_ver.arm_m_cntr
 # Loading altera_mf_ver.arm_n_cntr
 # Loading altera_mf_ver.arm_scale_cntr
-# ** Warning: (vsim-3017) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v(264): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v(264): [TFMPC] - Too few port connections. Expected 4, found 3.
 # 
 #         Region: /lg_highlevel/pll0
-# ** Warning: (vsim-3722) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v(264): [TFMPC] - Missing connection for port 'areset'.
+# ** Warning: (vsim-3722) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v(264): [TFMPC] - Missing connection for port 'areset'.
 # 
-# ** Warning: (vsim-3015) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v(379): [PCDPC] - Port size (32 or 32) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v(3).
+# ** Warning: (vsim-3015) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v(342): [PCDPC] - Port size (32 or 32) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v(3).
 # 
 #         Region: /lg_highlevel/Decode0/SE0
 # 
-# do C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/simulation/modelsim/my_custom_view.do
-# ** Error: Cannot open macro file: C:/Users/Chris/Dropbox/CS
-# Error in macro ./lg_highlevel_run_msim_rtl_verilog.do line 22
-# Cannot open macro file: C:/Users/Chris/Dropbox/CS
+# do C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/simulation/modelsim/my_custom_view.do
+# do wave.do
+# ** Error: Cannot open macro file: wave.do
+# Error in macro C:\Users\Chris\Documents\GitHub\Verilog_Pipeline\simulation\modelsim\my_custom_view.do line 1
+# Cannot open macro file: wave.do
 #     while executing
-# "do C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/simulation/modelsim/my_custom_view.do"
+# "do wave.do"
 add wave -position insertpoint sim:/lg_highlevel/*
-add wave -position insertpoint  \
-sim:/lg_highlevel/Memory0/DataMem \
-sim:/lg_highlevel/Memory0/HexOut
-add wave -position insertpoint  \
-sim:/lg_highlevel/Decode0/RF \
-sim:/lg_highlevel/Decode0/RF_VALID
 restart -f
-# ** Warning: (vsim-3017) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v(264): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v(264): [TFMPC] - Too few port connections. Expected 4, found 3.
 # 
 #         Region: /lg_highlevel/pll0
-# ** Warning: (vsim-3722) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v(264): [TFMPC] - Missing connection for port 'areset'.
+# ** Warning: (vsim-3722) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v(264): [TFMPC] - Missing connection for port 'areset'.
 # 
-# ** Warning: (vsim-3015) C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/decode.v(379): [PCDPC] - Port size (32 or 32) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/sign_extension.v(3).
+# ** Warning: (vsim-3015) C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/decode.v(342): [PCDPC] - Port size (32 or 32) does not match connection size (16) for port 'Out'. The port definition is at: C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/sign_extension.v(3).
 # 
 #         Region: /lg_highlevel/Decode0/SE0
 run -all
@@ -127,7 +122,7 @@ run -all
 # Time: 0  Instance: lg_highlevel.pll0.altpll_component.stratixii_pll.pll1
 #  Note : Cyclone II PLL locked to incoming clock
 # Time: 200000  Instance: lg_highlevel.pll0.altpll_component.stratixii_pll.pll1
-# ** Note: $finish    : C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v(245)
-#    Time: 10 us  Iteration: 0  Instance: /lg_highlevel
+# ** Note: $finish    : C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v(245)
+#    Time: 1 ms  Iteration: 0  Instance: /lg_highlevel
 # 1
-# Break in Module lg_highlevel at C:/Users/Chris/Dropbox/CS 3220/Assignment 5/homework5_v3/lg_highlevel.v line 245
+# Break in Module lg_highlevel at C:/Users/Chris/Documents/GitHub/Verilog_Pipeline/lg_highlevel.v line 245

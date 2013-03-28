@@ -119,91 +119,13 @@ begin
 				DataMem[I_ALUOut] <= I_DestValue;  // I_DestValue = base + offset
 				O_BranchAddrSelect <= 1'b0;
 			end
-			`OP_BRN:   O_BranchAddrSelect <= 1'b1;
-			`OP_BRZ:   O_BranchAddrSelect <= 1'b1;
-			`OP_BRP:   O_BranchAddrSelect <= 1'b1;
-			`OP_BRNZ:  O_BranchAddrSelect <= 1'b1;
-			`OP_BRZP:  O_BranchAddrSelect <= 1'b1;
-			`OP_BRNP:  O_BranchAddrSelect <= 1'b1;
-			`OP_BRNZP: O_BranchAddrSelect <= 1'b1;
-			`OP_JSR:   O_BranchAddrSelect <= 1'b1;
-			`OP_JSRR:  O_BranchAddrSelect <= 1'b1;
-			`OP_JMP:   O_BranchAddrSelect <= 1'b1;
+			`OP_BRN, `OP_BRZ, `OP_BRP, `OP_BRNZ, `OP_BRZP, `OP_BRNP, `OP_BRNZP, `OP_JSR, `OP_JSRR, `OP_JMP:   
+				O_BranchAddrSelect <= 1'b1;
 			default:   O_BranchAddrSelect <= 1'b0;
 		endcase
 		
 	 end // if ( (I_FetchStall==1'b0) && (I_DepStall==1'b0) )
-	 
-	 /*
-	// O_BranchAddrSelect <= 1'b0;
-	// if ( (I_FetchStall==1'b0) && (I_DepStall==1'b0) )
-	if (I_DepStall==1'b0)
-	begin
-	case (I_Opcode)
-		`OP_LDW: // double check later
-		begin
-			O_MemOut <= DataMem[I_ALUOut]; // I_ALUOut = base + offset
-			O_BranchAddrSelect <= 1'b0;
-		end
-		`OP_STW:
-		begin
-			DataMem[I_ALUOut] <= I_DestValue;  // I_DestValue = base + offset
-			O_BranchAddrSelect <= 1'b0;
-		end
-	`OP_BRN:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_BRZ:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_BRP:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_BRNZ:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_BRZP:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;	
-	end
-	`OP_BRNP:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_BRNZP:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_JSR:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_JSRR:
-	begin
-	O_BranchPC <= I_ALUOut;
-	O_BranchAddrSelect <= 1'b1;
-	end
-	`OP_JMP:
-	begin
-		O_BranchPC <= I_ALUOut;
-		O_BranchAddrSelect <= 1'b1;
-	end
-	default: O_BranchAddrSelect <= 1'b0;
-	endcase
-	end
-	*/
+
   end // if (I_LOCK == 1'b1)
   else
   begin

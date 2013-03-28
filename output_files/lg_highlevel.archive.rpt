@@ -1,5 +1,5 @@
 Archive Project report for lg_highlevel
-Wed Mar 27 21:08:39 2013
+Thu Mar 28 02:11:44 2013
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Wed Mar 27 21:08:39 2013 ;
+; Archive Project Status ; Successful - Thu Mar 28 02:11:44 2013 ;
 ; Revision Name          ; lg_highlevel                          ;
 ; Top-level Entity Name  ; lg_highlevel                          ;
 ; Family                 ; Cyclone II                            ;
@@ -50,14 +50,14 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/Chris/Dropbox/CS 3220/Assignment 5/hw5_03279pm.qar'
+Info: Generated archive 'C:/Users/Chris/Desktop/hw5/backup.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'lg_highlevel.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/12.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus II 32-bit Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 275 megabytes
-    Info: Processing ended: Wed Mar 27 21:08:39 2013
+    Info: Peak virtual memory: 259 megabytes
+    Info: Processing ended: Thu Mar 28 02:11:44 2013
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
